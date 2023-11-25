@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+
 .App {
   text-align: center;
 }
@@ -32,7 +36,120 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.homepage1 {
+  background-image: url("./bg.png");
+  /* background-size: cover; */
+  background-repeat: repeat;
+  animation: movements infinite 35s ease;
+  background-size: 400%;
+}
+
+@keyframes movements {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+}
+
+.font-cursive {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.font-nm {
+  font-family: 'Manrope', sans-serif;
+
+}
+
+.firstbt {
+  overflow: hidden;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.firstbt::before {
+  content: "";
+  position: absolute;
+  height: 90px;
+  width: 100%;
+  background-color: rgb(208, 148, 234);
+  border-radius: 90%;
+  left: 0;
+  top: 100%;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.firstbt:hover::before {
+  top: 0;
+  border-radius: 0;
+  /* content: "SEE OUR TREATMENTS"; */
+}
+
+/* Lines */
+
+.logos {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos-slide {
+  display: inline-block;
+  width: max-content;
+
+}
+
+.client-scroll {
+  animation: 60s sc infinite linear;
+}
+
+
+.logos-slide span {
+  display: inline;
+  padding: 40px 20px;
+}
+
+@keyframes sc {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.hcircle {
+  transition: all 0.5s ease;
+}
+
+.hcircle::before {
+  content: "";
+  position: absolute;
+  top: 1/2;
+  left: 1/2;
+  height: 0;
+  width: 0;
+  background-color: white;
+  border-radius: 100%;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.hcircle:hover::before {
+  height: 100%;
+  width: 100%;
 }
