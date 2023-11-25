@@ -3,7 +3,7 @@ import logo1 from "../logo1.jpeg"
 
 const Carousel = () => {
     return (
-        <div className='relative bg-[#333333] py-10'>
+        <div className='relative bg-[#333333] py-5'>
 
             <div className='flex flex-col md:flex-row justify-between items-center mx-3 md:mx-8 px-3'>
                 <img srcSet={logo1}></img>
